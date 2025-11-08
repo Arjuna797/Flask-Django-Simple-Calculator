@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  flask-app:
+    build: .
+    container_name: flask-calculator
+    ports:
+      - "8080:8080"
+    command: python app_flask.py
+
+  django-app:
+    build: .
+    container_name: django-calculator
+    ports:
+      - "8081:8081"
+    command: python app_django.py
